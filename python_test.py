@@ -103,9 +103,23 @@ def sum_even():
             total += sum
     
     print total
-def prime():
+def prime() :
     """소수 판별 프로그램"""
-    print "im prime()"
+    num = input("Input num: ")
+    check = True
+    if num == 2:
+       check = True
+    elif num < 2:
+       check = False
+    else:
+       for i in range(2,num):
+           if num % i == 0:
+            check = False
+    if check == True:
+           print "%d if Prime"%num
+    else:
+         print "%d if not Prime"%num
+     
 def sum_digits():
     """각 자리 숫자합 프로그램"""
     print "im sum_digits()"
